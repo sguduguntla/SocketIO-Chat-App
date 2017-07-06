@@ -1,0 +1,11 @@
+{
+  "name": "sai-socket-chat-app",
+  "version": "1.0.0",
+  "description": "Sai's Basic socket.io chat app",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "Sriharsha Guduguntla",
+  "license": "ISC"
+}
