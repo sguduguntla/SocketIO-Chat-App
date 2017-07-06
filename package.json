@@ -4,6 +4,7 @@
   "description": "Sai's Basic socket.io chat app",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "node app.js"
   },
   "author": "Sriharsha Guduguntla",
