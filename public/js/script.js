@@ -5,6 +5,7 @@ socket.on('connect', function() {
 });
 
 socket.on('message', function(message) {
+    $('.messages').append("<p>" + message.text + "</p>");
     console.log('New message:');
     console.log(message.text);
 });
@@ -22,5 +23,4 @@ $form.on('submit', function(e) {
     });
 
     $message.val("");
-
 });
