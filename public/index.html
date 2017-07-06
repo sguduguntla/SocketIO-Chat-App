@@ -5,19 +5,12 @@
         <title>Hello World</title>
     </head>
     <body>
-        Hello World
-        <div class="messages">
-            <!-- Messages end up here -->
-        </div>
-        <form id="message-form">
-            <input type="text" name="message"/>
-            <input type="submit" value="Send"/>
-        </form>
+        <h1>Join Chat</h1>
 
-        <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="js/socket.io.js"></script>
-        <script type="text/javascript" src="/js/QueryParams.js"></script>
-        <script type="text/javascript" src="/js/moment.min.js"></script>
-        <script type="text/javascript" src="/js/script.js"></script>
+        <form action="/chat.html">
+            <label>Display Name</label>
+            <input type="text" name="name"/>
+            <input type="submit" value="Join Chat">
+        </form>
     </body>
 </html>
