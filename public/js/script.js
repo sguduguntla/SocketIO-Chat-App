@@ -26,7 +26,7 @@ socket.on('message', function(message) {
     } else {
         messageType = "incomingMessage";
     }
-    var $message = $("<li class='list-group-item " + messageType + "'></li>");
+    var $message = $("<li class='clearfix list-group-item " + messageType + "'></li>");
     $message.append('<p><strong>' + message.name + ' ' + momentTimestamp.format('h:mm a') + ': </strong></p>');
     $message.append("<p>" + message.text + "</p>");
     $messages.append($message);
@@ -39,11 +39,11 @@ var $form = $('#message-form');
 
 //Takes care of pressing enter in a textarea
 
-$('textarea').keypress(function(e){
-  if(e.keyCode == 13 && !e.shiftKey) {
-   e.preventDefault();
-   $form.submit();
-  }
+$('textarea').keypress(function(e) {
+    if (e.keyCode == 13 && !e.shiftKey) {
+        e.preventDefault();
+        $form.submit();
+    }
 });
 
 // Handles submitting of new message
@@ -59,4 +59,15 @@ $form.on('submit', function(e) {
     });
 
     $message.val("");
+});
+
+//Prevents browser scrolling when scrolling through chat
+
+$('.list-group').on('mousewheel DOMMouseScroll', function(e) {
+
+    var e0 = e.originalEvent;
+    var delta = e0.wheelDelta || -e0.detail;
+
+    this.scrollTop += (delta < 0 ? 1 : -1) * 30;
+    e.preventDefault();
 });
