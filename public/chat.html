@@ -13,28 +13,37 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3 well">
-                <a href='index.html'>Change Settings</a>
+            <div class="col-md-6 col-md-offset-3 panel panel-default">
 
-                <h1 class='room-title text-center'><!-- Room name --></h1>
+                <div class='panel-heading room-title'>
+                    <!-- Room name -->
+                </div>
 
-                <ul class="messages list-group">
-                    <!-- Messages end up here -->
-                </ul>
 
-                <form id="message-form">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <span class='input-group-addon'><i class='glyphicon glyphicon-comment'></i></span>
-                            <input type="text" name="message" class="form-control">
+                <div class="panel-body">
+                    <a href='index.html'>Change Settings</a>
+
+                    <br>
+                    <br>
+
+
+                    <ul class="messages list-group">
+                        <!-- Messages end up here -->
+                    </ul>
+
+                    <form id="message-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class='input-group-addon'><i class='glyphicon glyphicon-comment'></i></span>
+                                <textarea placeholder="Type something to chat" type="text" name="message" resizable="false" class="form-control" autocomplete="off"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <input type="submit" value="Send" class="btn btn-default btn-block" />
-                    </div>
-                </form>
+                        <div class="form-group">
+                            <input type="submit" value="Send" class="btn btn-default btn-block btn-lg" />
+                        </div>
+                    </form>
+                </div>
             </div>
-
         </div>
 
     </div>
