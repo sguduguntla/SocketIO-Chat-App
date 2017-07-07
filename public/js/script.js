@@ -27,7 +27,7 @@ socket.on('message', function(message) {
         messageType = "incomingMessage";
     }
     var $message = $("<li class='clearfix list-group-item " + messageType + "'></li>");
-    $message.append('<p><strong>' + message.name + ' ' + momentTimestamp.format('h:mm a') + ': </strong></p>');
+    $message.append('<p><strong>' + message.name + ' ' + momentTimestamp.local().format('h:mm a') + ': </strong></p>');
     $message.append("<p>" + message.text + "</p>");
     $messages.append($message);
 
