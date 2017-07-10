@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -49,6 +49,76 @@
         </div>
 
     </div>
+
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <style>
+        .well {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="vertical-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 well">
+                    <h1 class='text-center'>Join Chat</h1>
+
+                    <form>
+                        <div class="form-group">
+                            <label>Display Name</label>
+                            <div class="input-group">
+                                <span class='input-group-addon'>
+                                <i class="glyphicon glyphicon-user"></i>
+                            </span>
+                                <input type="text" name="name" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Room Name</label>
+                            <div class="input-group">
+                                <span class='input-group-addon'><i class='glyphicon glyphicon-comment'></i></span>
+                                <input type="text" name="room" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input id="submitBtn" type="submit" value="Join Chat" class='btn btn-primary btn-block'>
+                        </div>
+                    </form>
+
+                    <h1 id="message"></h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+
+    <script type="text/javascript">
+        $("form").submit(function(e) {
+            e.preventDefault();
+
+            $("#message").html("Pressed button");
+        });
+
+
+    </script>
 
 </body>
 
